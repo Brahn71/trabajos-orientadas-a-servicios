@@ -1,81 +1,104 @@
-<!DOCTYPE HTML>
-<!--
-	Helios by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>abcUsuarios</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>abcUsuarios — Altas, Bajas y Consultas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <meta name="description" content="Práctica de Altas, Bajas y Consultas (ABC) con accesos a Bandas, Películas y Juegos." />
 
-			<!-- Header -->
-				<div id="header">
+  <!-- Estilos -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">abcUsuarios</a></h1>
-								<hr />
-								<p>Practica Altas, Bajas, Consultas</p>
-							</header>
-							<footer>
-								<a href="#seleccion" class="button circled scrolly">Iniciar</a>
-							</footer>
-						</div>
+  <style>
+    /* Ajustes mínimos sin tocar tu CSS principal */
+    .text-center { text-align: center; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 2rem; }
+    @media (max-width: 768px) { .grid-3 { grid-template-columns: 1fr; } }
+    .btn-primary { display:inline-block; padding:.9rem 1.25rem; border-radius:999px; text-decoration:none; }
+    /* Mejor enfoque que <center> y conserva el look de HTML5 UP */
+  </style>
+</head>
+<body class="homepage is-preload">
+  <a href="#seleccion" class="visually-hidden">Saltar al contenido</a>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="../bandas/rellenoBandas.php">Bandas</a></li>
-								<li><a href="../juegos/rellenoJuegos.php">Juegos</a></li>
-								<li><a href="../peliculas/rellenoPeliculas.php">Peliculas</a></li>
-							</ul>
-						</nav>
+  <div id="page-wrapper">
+    <!-- Header -->
+    <header id="header" role="banner">
+      <div class="inner">
+        <h1 class="text-center" style="margin-bottom:.25rem;">
+          <a href="index.html" id="logo" aria-label="Volver al inicio">abcUsuarios</a>
+        </h1>
+        <hr />
+        <p class="text-center" aria-describedby="descripcion-app">Práctica: Altas, Bajas y Consultas</p>
+        <p id="descripcion-app" class="visually-hidden">Sitio con accesos a Bandas, Películas y Juegos.</p>
+        <p class="text-center" style="margin-top:1.25rem;">
+          <a href="#seleccion" class="button circled scrolly btn-primary" role="button" aria-label="Ir a la selección de módulos">Iniciar</a>
+        </p>
+      </div>
 
-				</div>				
+      <!-- Nav -->
+      <nav id="nav" role="navigation" aria-label="Navegación principal">
+        <ul>
+          <!-- Marca aria-current si esta página es la “principal” -->
+          <li><a href="../bandas/rellenoBandas.php">Bandas</a></li>
+          <li><a href="../juegos/rellenoJuegos.php">Juegos</a></li>
+          <li><a href="../peliculas/rellenoPeliculas.php">Películas</a></li>
+        </ul>
+      </nav>
+    </header>
 
-			<!-- Features -->
-			
-				<div class="wrapper style1">
+    <!-- Main -->
+    <main class="wrapper style1" id="contenido" role="main">
+      <section id="seleccion" class="container special" aria-labelledby="titulo-seleccion">
+        <h2 id="titulo-seleccion" class="visually-hidden">Selección de módulos</h2>
 
-					<section id="seleccion" class="container special">
-						<div class="row">
-							<article class="col-4 col-12-mobile special">
-								<center><h2>Bandas</h2></center>
-								<a href="../bandas/rellenoBandas.php" class="image featured"><img src="images/bandas.jpg" alt="" /></a>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<center><h2>Peliculas</h2></center>
-								<a href="../peliculas/rellenoPeliculas.php" class="image featured"><img src="images/peliculas.jpg" alt="" /></a>
-								<header>
-								</header>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<center><h2>Juegos</h2></center>
-								<a href="../juegos/rellenoJuegos.php" class="image featured"><img src="images/juegos.jpg" alt="" /></a>
-								<header>
-								</header>
-							</article>
-						</div>
-					</section>
-		</div>
+        <div class="row grid-3">
+          <article class="col-4 col-12-mobile special" aria-labelledby="card-bandas">
+            <h3 id="card-bandas" class="text-center">Bandas</h3>
+            <a href="../bandas/rellenoBandas.php" class="image featured" aria-label="Abrir módulo Bandas">
+              <img src="images/bandas.jpg" alt="Portada del módulo de Bandas" loading="lazy" />
+            </a>
+          </article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+          <article class="col-4 col-12-mobile special" aria-labelledby="card-peliculas">
+            <h3 id="card-peliculas" class="text-center">Películas</h3>
+            <a href="../peliculas/rellenoPeliculas.php" class="image featured" aria-label="Abrir módulo Películas">
+              <img src="images/peliculas.jpg" alt="Portada del módulo de Películas" loading="lazy" />
+            </a>
+          </article>
 
-	</body>
+          <article class="col-4 col-12-mobile special" aria-labelledby="card-juegos">
+            <h3 id="card-juegos" class="text-center">Juegos</h3>
+            <a href="../juegos/rellenoJuegos.php" class="image featured" aria-label="Abrir módulo Juegos">
+              <img src="images/juegos.jpg" alt="Portada del módulo de Juegos" loading="lazy" />
+            </a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer sencillo opcional -->
+    <footer role="contentinfo" class="text-center" style="padding:2rem 1rem;">
+      <small>&copy; <span id="anio"></span> abcUsuarios. Todos los derechos reservados.</small>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Año dinámico en footer
+    document.addEventListener('DOMContentLoaded', function () {
+      var y = document.getElementById('anio');
+      if (y) y.textContent = new Date().getFullYear();
+    });
+  </script>
+  <script src="assets/js/jquery.min.js" defer></script>
+  <script src="assets/js/jquery.dropotron.min.js" defer></script>
+  <script src="assets/js/jquery.scrolly.min.js" defer></script>
+  <script src="assets/js/jquery.scrollex.min.js" defer></script>
+  <script src="assets/js/browser.min.js" defer></script>
+  <script src="assets/js/breakpoints.min.js" defer></script>
+  <script src="assets/js/util.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
 </html>
